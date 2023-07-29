@@ -10,6 +10,8 @@ app.use(express.json())
 app.use("/api/auth",require("./routes/auth"));
 app.use("/api/notes",require("./routes/notes"))
 
-app.listen(8070,()=>{
-    console.log("dbNotes app listening on port 8070")
+const port = process.env.PORT || 3000;
+
+app.listen(port,()=>{
+    console.log("dbNotes app listening on port "+port)
 })
